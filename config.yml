@@ -1,0 +1,22 @@
+# Streamlabs configuration
+streamlabs:
+  access_token: "YOUR_STREAMLABS_ACCESS_TOKEN"
+  check_interval: 5000 # milliseconds
+
+# Twitch configuration
+twitch:
+  oauth_token: "YOUR_TWITCH_OAUTH_TOKEN"
+  channel_name: "YOUR_TWITCH_CHANNEL_NAME"
+  channel_id: "YOUR_TWITCH_CHANNEL_ID"
+
+# Cooldowns for actions (in milliseconds)
+cooldowns:
+  twitch_follow: 5000
+  twitch_subscription: 10000
+  twitch_host: 30000
+  twitch_bits: 5000
+  twitch_raids: 30000
+  youtube_follow: 5000
+  youtube_subscription: 10000
+  youtube_superchat: 5000
+  twitch_channel_points: 5000

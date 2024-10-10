@@ -1,0 +1,43 @@
+# Twitch Events
+twitch_follow:
+  - command: "title @a title {\"text\":\"%username% followed on Twitch!\",\"color\":\"light_purple\"}"
+  - broadcast: "%username% just followed on Twitch!"
+
+twitch_subscription:
+  - command: "execute at @a run summon firework_rocket ~ ~1 ~ {LifeTime:30,FireworksItem:{id:firework_rocket,Count:1,tag:{Fireworks:{Flight:1,Explosions:[{Type:1,Flicker:1,Trail:1,Colors:[I;11743532,3887386],FadeColors:[I;14188952,4312372]}]}}}}"
+  - broadcast: "Thank you %username% for subscribing on Twitch!"
+
+twitch_host:
+  - command: "broadcast %username% is hosting the stream!"
+  - command: "effect give @a minecraft:jump_boost 30 1"
+
+twitch_bits:
+  - command: "give @a minecraft:diamond %amount%"
+  - broadcast: "%username% cheered %amount% bits!"
+
+twitch_raids:
+  - command: "effect give @a minecraft:speed 30 2"
+  - broadcast: "Raid alert! %username% is raiding with %amount% viewers!"
+
+# YouTube Events
+youtube_follow:
+  - command: "title @a title {\"text\":\"%username% subscribed on YouTube!\",\"color\":\"red\"}"
+  - broadcast: "Welcome, %username%, our new YouTube subscriber!"
+
+youtube_subscription:
+  - command: "execute at @a run summon lightning_bolt ~ ~ ~"
+  - broadcast: "%username% just became a YouTube member!"
+
+youtube_superchat:
+  - command: "weather thunder 300"
+  - broadcast: "Super Chat alert! %username% donated %formatted_amount%: %message%"
+
+# Twitch Channel Points
+twitch_channel_points:
+  - command: "give @a minecraft:experience_bottle %amount%"
+  - broadcast: "%username% redeemed %formatted_amount% channel points for: %message%"
+
+# You can add more custom actions or use 'broadcast' to send a message
+# example_event:
+#   - broadcast: "This is a custom message for %username%"
+#   - command: "your_custom_command_here"
